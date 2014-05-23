@@ -16,7 +16,6 @@ foreach my $prefix (@prefix_list) {
   print n2ip(rndip(ip2n($ip->first->addr),ip2n($ip->last->addr))), "\n";
 }
 
-
 sub ip2n{ unpack 'N', pack 'C4', split '\.', $_[0] };
 sub n2ip{ join '.', unpack 'C4', pack 'N', $_[0] };
 sub rndip{ $_[0] + int rand( $_[1] - $_[0] + 1 ) }; 
